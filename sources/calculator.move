@@ -1,4 +1,4 @@
-module metaschool::calculator {
+module metaschool::calculator_move {
     use std::error;
     use std::signer;
 
