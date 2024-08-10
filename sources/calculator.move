@@ -59,7 +59,7 @@ module metaschool::calculator {
     public entry fun power(account: &signer, num1: u64, num2: u64) acquires Calculator {
         let calculator = borrow_global_mut<Calculator>(signer::address_of(account));
         if (num2 == 0) {
-            abort error::invalid_argument(0)
+            calculator.result = 1;
         } else {
             let i = 1;
             calculator.result = num1;
